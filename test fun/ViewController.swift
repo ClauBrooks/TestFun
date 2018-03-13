@@ -9,10 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var buttonCount = 0
+    @IBOutlet weak var MyLabel: UILabel!
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        buttonCount = buttonCount + 1
+        print (buttonCount)
+        
+        if buttonCount >= 12 {
+            view.backgroundColor = UIColor.yellow
+            
+            MyLabel.text = "you hit it more than 12 times!"
+            }
+    
+    
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
